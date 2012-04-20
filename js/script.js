@@ -197,7 +197,6 @@
 				div = document.createElement('div');
 				$(div).addClass('annotation-container');
 				while (main.childNodes.length) {
-					console.log(main.firstChild.nodeName);
 					div.appendChild(main.firstChild);
 				}
 				main.appendChild(div);
