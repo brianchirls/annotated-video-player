@@ -1,0 +1,95 @@
+[
+	{
+		"plugin": "chapter",
+		"start": 0,
+		"id": "chapter1",
+		"title": "The First Chapter",
+		"header": "Chapter One"
+	},
+	{
+		"plugin": "chapter",
+		"start": 20,
+		"id": "chapter2",
+		"title": "Is Right Up Here in this Business",
+		"header": "Chapter Two"
+	},
+	{
+		"plugin": "chapter",
+		"start": 40,
+		"id": "chapter3",
+		"title": "The Third Chapter",
+		"header": "Chapter Three"
+	},
+	{
+		"plugin": "chapter",
+		"start": 80,
+		"id": "chapter4",
+		"title": "Is Right Up Here in this Business",
+		"header": "Chapter Four"
+	},
+	{
+		"plugin": "chapter",
+		"start": 120,
+		"id": "chapter5",
+		"title": "Is Right Up Here in this Business",
+		"header": "Chapter Five"
+	},
+	{
+		"plugin": "annotation",
+		"start": 0,
+		"title": "Media Left Template Used for Still Image",
+		"headline": "The United States of Shale Energy",
+		"template": "media-left",
+		"text": "Growing demand from surging Asian economies has driven energy prices upward in recent years, finally making it profitable to use hydro-fracking techniques to extract oil and gas from underground shale formations. This means that places once considered off-limits to energy exploration are now \"in play.\" But how will the new industrialization of once-pastoral landscapes from North Dakota to Western New York change the nature of those communities?",
+		"image": "image/sample.jpg",
+		"caption": "The Energy Parade makes its way down main street, Willison on September 18th. The annual street festival and barbecue is paid for by...",
+		"related": [
+			{
+				"text": "North Dakota Department of Mineral Resources",
+				"link": "https://www.dmr.nd.gov/"
+			},
+			{
+				"text": "Helms says EPA could halt fracking in oil patch (Bismarck Tribunte, Nov. 2011)",
+				"link": "http://bismarcktribune.com/news/state-and-regional/helms-says-epa-could-halt-fracking-in-oil-patch/article_fe9a3284-18b9-11e1-ba39-001cc4c03286.html"
+			}
+		],
+		"extra": "&#8220;Sed tellus turpis, commodo at aliquam quis, blandit et dui. Nulla eu nunc ante. Nunc vitae lingula neque, a elementum leo.&#8221;"
+	},
+	{
+		"plugin": "annotation",
+		"start": 5,
+		"title": "Media Right Template Used for Map Graphic",
+		"headline": "This is a pretty big map",
+		"template": "media-right",
+		"text": "Growing demand from surging Asian economies has driven energy prices upward in recent years, finally making it profitable to use hydro-fracking techniques to extract oil and gas from underground shale formations. This means that places once considered off-limits to energy exploration are now \"in play.\" But how will the new industrialization of once-pastoral landscapes from North Dakota to Western New York change the nature of those communities?",
+		"image": "image/sample2.jpg",
+		"caption": "The Energy Parade makes its way down main street, Willison on September 18th. The annual street festival and barbecue is paid for by..."
+	},
+	{
+		"plugin": "annotation",
+		"start": 80,
+		"end": 90,
+		"template": "media-left",
+		"title": "The Mineral Reserve Fund As Wyoming's Umbrella",
+		"headline": "Headline of Profile Panel",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+		"image": "image/cowboy.jpg"
+	},
+	{
+		"plugin": "annotation",
+		"start": 90,
+		"end": 100,
+		"title": "Anne Noble's Fight for Environmental Justice",
+		"headline": "Headline of Second Panel",
+		"text": "It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.\nDuring the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.\nPursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy...."
+	},
+	{
+		"plugin": "lowerthird",
+		"start": 54,
+		"end": 59,
+		"title": "Lynn Helms",
+		"subtitle": "Director, North Dakota Minerals Commission",
+		"link": "http://mozilla.org",
+		"target": "lower-third"
+	}
+]

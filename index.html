@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Stanford</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700|Mako' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
+		<!--[if gte IE 9]>
+		  <style type="text/css">
+			/* http://www.colorzilla.com/gradient-editor/ */
+			.popcorn-chapter, .popcorn-chapter.active {
+			   filter: none;
+			}
+		  </style>
+		<![endif]-->
+		<script type="text/javascript" src="external/modernizr.js"></script>
+	</head>
+	<body>
+		<section id="top">
+			<header>
+				<div class="feature">Video Feature</div>
+				<h1>Energy Boom and Bust in the West</h1>
+				<p>Aliquam quis mi. Nulla facilisi. Aliquam erat volutpat. Suspendisse bibendum. Fusce ac sapien. Donec ac turpis. Nulla magna velit, sagittis at, vestibulum sit amet, lobortis at, purus.
+			</header>
+			<section id="main">
+				<div id="video-container">
+					<video id="video" preload>
+						<!--
+						<source src="http://videos-cdn.mozilla.net/serv/webmademovies/Moz_Doc_0329_GetInvolved_ST.webm" type='video/webm; codecs="vp8, vorbis"'/>-->
+						<source src="video/temp.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+						<source src="video/temp.webm" type='video/webm; codecs="vp8, vorbis"' />
+
+						<source src="video/temp.ogv" type='video/ogg; codecs="theora, vorbis"' />
+					</video>
+					<div id="lower-third" class="require-video"></div>
+				</div>
+				<div id="chapters" class="require-video"></div>
+			</section>
+		</section>
+		<section id="meta" class="require-video">
+			<div id="meta-container">
+				<div id="related-content">
+					<div>Related Content</div>
+					<div id="related-chapter">
+						<div>Chapter</div>
+						<div>
+							<span id="chapter-back" class="chapter-button"></span>
+							<span id="related-chapter-number">2</span>
+							<span id="chapter-next" class="chapter-button"></span>
+						</div>
+					</div>
+				</div>
+				<div id="related-all">Show related content for all chapters</div>
+				<div class="close-related-all"><span class="close">Close</span>Related content for all chapters</div>
+				<div id="annotations"></div>
+				<div class="close-related-all"><span class="close">Close</span>Related content for all chapters</div>
+			</div>
+		</section>
+		<footer></footer>
+	</body>
+	<script type="text/javascript" src="external/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="external/popcorn.js"></script>
+	<script type="text/javascript" src="external/popcorn-base.js"></script>
+	<script type="text/javascript" src="js/popcorn.chapter.js"></script>
+	<script type="text/javascript" src="js/popcorn.annotation.js"></script>
+	<script type="text/javascript" src="js/popcorn.lowerthird.js"></script>
+	<script type="text/javascript" src="js/canvasplayer.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</html>

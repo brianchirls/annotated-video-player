@@ -1,0 +1,7 @@
+.popcorn-chapter {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d5751', endColorstr='#3e3530',GradientType=0 ); /* IE6-8 */
+}
+
+.popcorn-chapter.active {
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#272318', endColorstr='#27231c',GradientType=0 ); /* IE6-8 */
+}

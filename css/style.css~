@@ -1,0 +1,202 @@
+body {
+	margin: 0 auto;
+	background-color: #2E2923;
+	font-family: 'Bitter';
+}
+
+#top {
+	margin: 20px auto;
+	max-width: 1024px;
+	color: #E6E6E6;
+}
+
+#main {
+	display: inline-block;
+	color: #E3E3E3;
+	/* small text: #C6C6C6 */
+	width: 668px;
+	padding: 0;
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+#top > header {
+	float: left;
+	display: inline-block;
+	width: 280px;
+	font-size: 12px;
+	margin: 32px 12px 32px 0;
+}
+
+@media all and (max-width: 960px) {
+	#top {
+		padding: 20px;
+	}
+
+	#top > header {
+		float: none;
+		width: auto;
+		margin-top: 0;
+	}
+	
+	#main {
+		display: block;
+		width: auto;
+		text-align: center;
+	}
+}
+
+#top > header > .feature {
+	text-transform: uppercase;
+}
+
+#top > header h1 {
+	font-weight: bold;
+	font-size: 24px;
+	margin: 6px 0 10px;
+}
+
+#top > header p {
+	font-size: 13px;
+	line-height: 17px;
+}
+
+#video-container {
+	position: relative;
+	display: inline-block;
+	height: 376px;
+	width: 668px;
+	text-align: left;
+}
+
+#video-container > video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#lower-third {
+	position: absolute;
+	bottom: 30%;
+	left: 0;
+}
+
+#chapters {
+	display: table;
+	text-align: center;
+	margin: 12px auto;
+	color: #E6E6E6;
+	border: black solid 1px;
+	border-radius: 4px;
+/*	background-color: #6E6253;*/
+}
+
+#chapters>div, /* iOS */
+.popcorn-chapter {
+	display: table-cell;
+	width: 118px;
+	padding: 8px 12px;
+	-moz-box-model: border-box;
+	-webkit-box-model: border-box;
+	-o-box-model: border-box;
+	-ie-box-model: border-box;
+	box-model: border-box;
+	
+	border-left: solid 1px #333333;
+	
+	text-align: left;
+	vertical-align: top;
+	font-family: 'Mako';
+	font-size: 14px;
+
+	/* CSS gradient from http://www.colorzilla.com/gradient-editor/ */
+	background: #5d5751; /* Old browsers */
+	background: -moz-linear-gradient(top, #5d5751 0%, #615b54 30%, #615b54 69%, #3e3530 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5d5751), color-stop(30%,#615b54), color-stop(69%,#615b54), color-stop(100%,#3e3530)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #5d5751 0%,#615b54 30%,#615b54 69%,#3e3530 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #5d5751 0%,#615b54 30%,#615b54 69%,#3e3530 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #5d5751 0%,#615b54 30%,#615b54 69%,#3e3530 100%); /* IE10+ */
+	background: linear-gradient(top, #5d5751 0%,#615b54 30%,#615b54 69%,#3e3530 100%); /* W3C */
+}
+
+#chapters>div:first-child, /* iOS */
+.popcorn-chapter:first-child {
+	border: none;
+	border-radius: 4px 0 0 4px;
+}
+
+#chapters>div.active, /* iOS */
+.popcorn-chapter.active {
+	color: white;
+
+	background: #272318; /* Old browsers */
+	background: -moz-linear-gradient(top, #272318 0%, #38342e 25%, #38342e 75%, #27231c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#272318), color-stop(25%,#38342e), color-stop(75%,#38342e), color-stop(100%,#27231c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #272318 0%,#38342e 25%,#38342e 75%,#27231c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #272318 0%,#38342e 25%,#38342e 75%,#27231c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #272318 0%,#38342e 25%,#38342e 75%,#27231c 100%); /* IE10+ */
+	background: linear-gradient(top, #272318 0%,#38342e 25%,#38342e 75%,#27231c 100%); /* W3C */
+}
+
+#chapters > div > div, /* iOS */
+.popcorn-chapter > div {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+
+#meta {
+	background-color: #ECECEC;
+	clear: both;
+	margin-top: 20px;
+}
+
+#related-buttons {
+	text-align: center;
+	position: relative;
+}
+
+#related-buttons > span {
+    left: 50%;
+    margin-left: -25%;
+    padding: 10px;
+    position: absolute;
+    top: -20px;
+	background-color: #ECECEC;
+}
+
+#annotations {
+	position: relative;
+	width: 90%;
+	height: 400px;
+}
+
+/* annotation main box */
+.popcorn-annotation {
+	display: inline;
+}
+
+.popcorn-annotation > div {
+	display: inline;
+}
+
+.popcorn-annotation > div + div {
+	position: absolute;
+	background-color: white;
+	top: 32px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.popcorn-annotation .headline {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/* no HTML5 video: */
+
+html.no-video .require-video {
+	display: none;
+}
