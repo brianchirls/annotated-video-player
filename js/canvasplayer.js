@@ -28,7 +28,7 @@
 				return;
 			}
 
-			classes = this.toArray(classes, /\s\t\r\n /);
+			classes = classes.split(/\s\t\r\n /);
 			curClasses = element.getAttribute('class') || '';
 			curClasses = curClasses.split(/\s\t\r\n /);
 			
@@ -48,7 +48,7 @@
 				return;
 			}
 
-			classes = this.toArray(classes, /\s\t\r\n /);
+			classes = classes.split(/\s\t\r\n /);
 			curClasses = element.getAttribute('class') || '';
 			curClasses = curClasses.split(/[\s\t\r\n ]+/);
 
