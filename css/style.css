@@ -393,25 +393,6 @@ body {
 	height: 100%;
 }
 
-
-/*
-.popcorn-annotation section.image + section {
-	margin-left: 268px;
-}
-*/
-
-.popcorn-annotation section.video {
-	width: 440px;
-}
-
-.popcorn-annotation section.video + section {
-	margin-left: 478px;
-}
-
-.popcorn-annotation video {
-	width: 100%;
-}
-
 .annotation-handle {
 	display: none;
 	position: absolute;

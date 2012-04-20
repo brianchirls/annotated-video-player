@@ -67,6 +67,20 @@
 	},
 	{
 		"plugin": "annotation",
+		"start": 10,
+		"title": "Media Left With Video",
+		"headline": "This is a lovely video",
+		"template": "media-left",
+		"text": "Growing demand from surging Asian economies has driven energy prices upward in recent years, finally making it profitable to use hydro-fracking techniques to extract oil and gas from underground shale formations. This means that places once considered off-limits to energy exploration are now \"in play.\" But how will the new industrialization of once-pastoral landscapes from North Dakota to Western New York change the nature of those communities?",
+		"video": [
+			"video/schmitz-landman.webm",
+			"video/schmitz-landman.mp4"
+		],
+		"poster": "image/schmitz-landman-poster.png",
+		"caption": "The Energy Parade makes its way down main street, Willison on September 18th. The annual street festival and barbecue is paid for by..."
+	},
+	{
+		"plugin": "annotation",
 		"start": 80,
 		"end": 90,
 		"template": "media-left",

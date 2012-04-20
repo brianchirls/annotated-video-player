@@ -176,6 +176,13 @@
 
 				vid = $('video', base.container);
 				if (vid && vid.length) {
+					//need to wrap video inside another container
+					div = document.createElement('div');
+					vid[0].parentNode.insertBefore(div, vid[0]);
+					div.appendChild(vid[0]);
+					$(div).addClass('video-container');
+
+
 					player = new VideoPlayer(vid[0]);
 					vid.bind('play', function() {
 						video.pause();

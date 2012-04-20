@@ -42,8 +42,23 @@
 		}
 		
 		function getMediaSources(video, sources) {
-			var i;
-			
+			function getExtension(url) {
+				var ext = url.split('.');
+				if (ext.length > 1) {
+					return ext.pop().toLowerCase();
+				}
+
+				return '';
+			}
+
+			var i, source;
+
+			sources = base.toArray(sources);
+			for (i = 0; i < sources.length; i++) {
+				source = document.createElement('source');
+				source.setAttribute('src', sources[i]);
+				video.appendChild(source);
+			}
 		}
 		
 		if (!base.target || !options.title) {
@@ -59,6 +74,8 @@
 					'.popcorn-annotation.active { display: block; }\n' +
 					'.popcorn-annotation > .title + div.media-left section.image { float: left; }\n' +
 					'.popcorn-annotation > .title + div.media-right section.image { float: right; }\n' +
+					'.popcorn-annotation > .title + div.media-left section.video { float: left; }\n' +
+					'.popcorn-annotation > .title + div.media-right section.video { float: right; }\n' +
 					'.popcorn-annotation > .title + div .clear { clear: both; border: none; }\n' +
 					'.popcorn-annotation aside { float: right; }' +
 					'.popcorn-annotation aside > a { display: block; }'
@@ -99,7 +116,8 @@
 				}
 				
 				//todo: get multiple sources
-				img.src = options.video;
+				getMediaSources(img, options.video);
+				//img.src = options.video;
 				base.addClass(mediaSection, 'video');
 				img.addEventListener('loadedmetadata', mediaLoaded, false);
 			} else if (options.image) {
