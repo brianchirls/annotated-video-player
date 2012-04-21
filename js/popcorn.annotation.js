@@ -166,6 +166,7 @@
 				if (options.imageLink) {
 					link = document.createElement('a');
 					link.setAttribute('href', options.imageLink);
+					link.setAttribute('target', '_blank');
 					link.appendChild(img);
 					mediaContainer.appendChild(link);
 				} else {
