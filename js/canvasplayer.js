@@ -246,7 +246,7 @@
 			stylesheet.appendChild(document.createTextNode('.video-player { position: absolute; height: 39px; border-radius: 4px; background-color: rgba(26, 21, 15, 0.5); padding: 8px 15px; bottom: 6px; left: 6px; opacity: 0;  -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s;  -ie-transition: opacity 0.5s; -o-transition: opacity 0.5s; transition: opacity 0.5s; }\n' +
 			'.video-player > * { cursor: pointer; display: inline; color: rgba(255, 255, 255, 0.6); font-family: sans-serif; font-size: 14px; }\n' +
 			'.video-player-control { border-radius: 4px; background-color: rgba(46, 41, 35, 0.6); height: 100%; display: inline-block; }\n' +
-			'*:hover > .video-player { opacity: 1; -webkit-transition: opacity 0.2s; -moz-transition: opacity 0.1s;  -ie-transition: opacity 0.1s; -o-transition: opacity 0.1s; transition: opacity 0.1s; }\n' +
+			'*:hover > .video-player, .video-player.hover { opacity: 1; -webkit-transition: opacity 0.2s; -moz-transition: opacity 0.1s;  -ie-transition: opacity 0.1s; -o-transition: opacity 0.1s; transition: opacity 0.1s; }\n' +
 			'.video-player-play {width: 54px; float: left; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sMHRUmNCspMgUAAACYSURBVDjLpZIhDsJAEEXfkEFg4AQVGK6C4fqYFSBagakFUZKPoWTTbEun/W6TeW8yM2uSzkAHJDNrCMYkXbL3MyoaCsKiMUGfDrgDNzN7lwr8T4MtcAKOkooinznqqMiDS89FDyBFBbmoAg4b1sV9BdwCV18IJjNro0usgaYHI2esvx1f0Y80CU4JZoElQQj8RdJe0m7pLT9jzkKaeyyJOQAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-position: center; } \n' +
 			'.video-player-play.playing { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sMHRUfOCwb85QAAABlSURBVDjL7YwhCsNQFARnPzHROUtF7y8icpanawpbkQbCZz9ElKqMnB1WtifgASzsFLBJetMxbG0/T/KgJK3hJLYtSIDF9px8co0Bkl5cpPED7pP75K8nFXwN+tg2YOvG+rpEbD95DSM2rfcI8gAAAABJRU5ErkJggg=="); } \n' +
 			'.video-player-timer {width: 101px; float: right; padding: 12px; -moz-box-sizing: border-box; -o-box-sizing: border-box; -webkit-box-sizing: border-box; -ie-box-sizing: border-box; box-sizing: border-box; cursor: auto; text-align: right; font-size: 13px; } \n' +
@@ -332,6 +332,21 @@
 				shuttlePaused = true;
 			}
 		});
+
+		//display controls when video is clicked (for tablets that don't have hover)
+		applyMouseTouchHandlers(media, (function (main) {
+			var hoverTimeout;
+			return function() {
+				if (hoverTimeout) {
+					clearTimeout(hoverTimeout);
+				}
+				addClass(main, 'hover');
+				hoverTimeout = setTimeout(function() {
+					hoverTimeout = false;
+					removeClass(main, 'hover');
+				}, 5000);
+			};
+		})(main));
 
 		//todo: set colors and other draw parameters
 		this.background = 'rgba(33, 42, 10, 0.5)';
