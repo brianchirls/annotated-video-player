@@ -5,7 +5,7 @@ body {
 }
 
 #top {
-	margin: 20px auto;
+	margin: 10px auto -40px auto;
 	padding: 0 12px;
 	max-width: 936px;
 	color: #E6E6E6;
@@ -45,11 +45,12 @@ body {
 */
 #top > header > .feature {
 	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 #top > header h1 {
-	font-weight: bold;
-	font-size: 24px;
+	font-weight: normal;
+	font-size: 22px;
 	margin: 6px 0 10px;
 }
 
@@ -296,19 +297,18 @@ body {
 	display: inline-block;
 	position: relative;
 	z-index: 2;
-/*	max-width: 130px; */
 	padding: 6px 12px;
 	height: 26px;
 	width: 140px;
 	vertical-align: top;
 
 	font-size: 10px;
+	line-height: 13px;
 	color: #666666;
 
-	background-color: white;
+	background-color: #EFEFEF;
 	border-radius: 4px 4px 0 0;
-	border: #1a1a1a solid 1px;
-/*	box-shadow: 2px 0 2px #1a1a1a; */
+	border: #666 solid 1px;
 
 	cursor: pointer;
 }
@@ -316,6 +316,7 @@ body {
 .popcorn-annotation.selected .title {
 	border-bottom: white solid 1px;
 	color: black;
+	background-color: white;
 }
 
 .popcorn-annotation > div + div {
@@ -324,6 +325,10 @@ body {
 	overflow: auto;
 	top: 39px; /* overlaps by 1 */
 	left: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ie-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
 	border-radius: 0 4px 4px 4px;
@@ -344,6 +349,8 @@ body {
 .popcorn-annotation .headline {
 	font-weight: bold;
 	font-size: 20px;
+	letter-spacing: -1px;
+	color: #131313;
 }
 
 .popcorn-annotation aside {
@@ -355,9 +362,12 @@ body {
 }
 
 .popcorn-annotation aside > h3 {
-	font-size: 14px;
+	font-size: 13px;
 	text-transform: uppercase;
 	margin-top: 0;
+	letter-spacing: 0.1em;
+	font-weight: normal;
+	margin-bottom: 0;
 }
 
 .popcorn-annotation aside > a {
@@ -365,11 +375,18 @@ body {
 	margin: 10px 0;
 	color: #707070;
 	text-decoration: none;
+	line-height: 15px;
+}
+
+.popcorn-annotation aside .extra {
+	font-size: 16px;
+	line-height: 19px;
+	padding-top: 10px;
 }
 
 .popcorn-annotation .media-left section.video,
 .popcorn-annotation .media-left section.image {
-	margin-right: 38px;
+	margin-right: 30px;
 	height: 100%;
 }
 
@@ -379,8 +396,14 @@ body {
 	height: 100%;
 }
 
-.popcorn-annotation .caption {
-	font-size: 14px;
+.popcorn-annotation .media-container .caption {
+	font-size: 11px;
+	font-family: 'Mako', sans-serif;
+	line-height: 16px;
+	color: #666;
+	margin-top: 7px;
+
+	padding-right: 0;
 }
 
 /*
@@ -392,6 +415,13 @@ body {
 .popcorn-annotation section.video,
 .popcorn-annotation section.image {
 	height: 100%;
+}
+
+.popcorn-annotation .annotation-container section p {
+	font-size: 15px;
+	line-height: 20px;
+	color: #131313;
+	padding-right: 22px;
 }
 
 .annotation-handle {
@@ -420,7 +450,7 @@ body {
 }
 
 #meta-container.all #annotations .popcorn-annotation .annotation-container {
-	border-radius: 0 4px 4px 4px;
+	border-radius: 4px;
 	border: #666666 solid 1px;
 }
 
@@ -438,6 +468,7 @@ body {
 #meta-container.all #annotations .annotation-handle {
 	display: block;
 	border-right: none;
+	padding-top: 5px;
 }
 
 #meta-container.all #annotations .annotation-handle > div {
@@ -459,13 +490,16 @@ body {
 }
 
 #meta-container.all #annotations .annotation-handle time {
-	font-size: 16px;
-	font-family: Moko;
+	font-size: 20px;
+	font-weight: normal;
+	color: #313131;
+	letter-spacing: -1.5px;
 }
 
 #meta-container.all #annotations .annotation-handle .button {
 	width: 24px;
 	height: 18px;
+	margin: 3px 0;
 	display: inline-block;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wEFBMlHGFBgX0AAACwSURBVDjLxZRBCsIwEEW/pVu7MC4mi/QIiihi0BsoeDlBPIiIN9FcoFk0XiCBunJpaRJGZz28B/OHP7qcT521DTiGSKLgggOAtQ0KMM//BfvDEbP5AuOqShKUQ5aUqqFUDedaGPPAyzmeEwkxhdY7bPQWEyH4MogRZYX8ES1X654MuvxP8d7jG6fMATvXwjz7Qy+5wEmCGHCUIAU8WHC/XRFC4KuKHPhvyo5IssGJJN6uSUjZvNIQ/AAAAABJRU5ErkJggg==);
 	background-repeat: no-repeat;
