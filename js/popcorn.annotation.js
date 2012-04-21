@@ -177,9 +177,9 @@
 
 			//caption
 			if (options.caption) {
-				p = document.createElement('p');
+				p = document.createElement('div');
 				base.addClass(p, 'caption');
-				p.appendChild(document.createTextNode(options.caption));
+				p.innerHTML = options.caption;
 				mediaContainer.appendChild(p);
 			}
 
