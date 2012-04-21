@@ -157,14 +157,22 @@
 					base.addClass(mediaSection, 'video');
 					img.addEventListener('loadedmetadata', mediaLoaded, false);
 				}
+				mediaContainer.appendChild(img);
 			} else if (options.image) {
 				img = document.createElement('img');
 				img.src = options.image;
 				base.addClass(mediaSection, 'image');
 				img.addEventListener('load', mediaLoaded, false);
+				if (options.imageLink) {
+					link = document.createElement('a');
+					link.setAttribute('href', options.imageLink);
+					link.appendChild(img);
+					mediaContainer.appendChild(link);
+				} else {
+					mediaContainer.appendChild(img);
+				}
 			}
 
-			mediaContainer.appendChild(img);
 
 			//caption
 			if (options.caption) {
