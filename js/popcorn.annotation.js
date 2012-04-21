@@ -4,7 +4,8 @@
 	var document = window.document;
 
 	//temp
-	var styleSheet;
+	var styleSheet,
+		isIOS = navigator.userAgent.match(/i(Pad|Phone|Pod)/);
 
 	Popcorn.basePlugin('annotation', function(options, base) {
 		var media = this.media, targetTime,
@@ -38,6 +39,36 @@
 
 			if (mediaSection) {
 				mediaSection.style.width = width + 'px';
+			}
+		}
+
+		function makeIPadNewWindowLink(element, sources) {
+			var i, ext, source, callback;
+			sources = base.toArray(sources);
+			if (!sources.length) {
+				return;
+			}
+
+			source = sources[0];
+			for (i = 0; i < sources.length; i++) {
+				ext = sources[i].split('.').pop();
+				if (ext && ext.toLowerCase) {
+					ext = ext.toLowerCase();
+					if (ext === 'mp4' || ext === 'mov') {
+						source = sources[i];
+						break;
+					}
+				}
+			}
+
+			if (source) {
+				callback = (function(url) {
+					return function (event) {
+						window.open(url, 'popcorn-annotation-video-spawn');
+					};
+				}(source));
+
+				element.addEventListener('touchend', callback, false);
 			}
 		}
 		
@@ -107,28 +138,30 @@
 			mediaSection = document.createElement('section');
 
 			if (options.video) {
-				img = document.createElement('video');
-				img.controls = true;
-				if (options.poster) {
-					img.setAttribute('poster', options.poster);
-				} else if (options.image) {
-					img.setAttribute('poster', options.image);
+				if (isIOS && options.poster) {
+					img = document.createElement('img');
+					img.src = options.poster;
+					base.addClass(mediaSection, 'image');
+					img.addEventListener('load', mediaLoaded, false);
+					makeIPadNewWindowLink(img, options.video);
+				} else {
+					img = document.createElement('video');
+					img.controls = true;
+					if (options.poster) {
+						img.setAttribute('poster', options.poster);
+					} else if (options.image) {
+						img.setAttribute('poster', options.image);
+					}
+					
+					getMediaSources(img, options.video);
+					base.addClass(mediaSection, 'video');
+					img.addEventListener('loadedmetadata', mediaLoaded, false);
 				}
-				
-				//todo: get multiple sources
-				getMediaSources(img, options.video);
-				//img.src = options.video;
-				base.addClass(mediaSection, 'video');
-				img.addEventListener('loadedmetadata', mediaLoaded, false);
 			} else if (options.image) {
 				img = document.createElement('img');
-				//todo: get multiple sources
 				img.src = options.image;
 				base.addClass(mediaSection, 'image');
-
 				img.addEventListener('load', mediaLoaded, false);
-			} else if (options.map) {
-
 			}
 
 			mediaContainer.appendChild(img);
