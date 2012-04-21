@@ -221,7 +221,13 @@
 		headline.appendChild(document.createTextNode(options.headline));
 		mainSection.appendChild(headline);
 		
-		if (options.text) {
+		if (options.html) {
+			text = document.createElement('div');
+			text.innerHTML = options.html;
+			while (text.childNodes.length) {
+				mainSection.appendChild(text.childNodes[0]);
+			}
+		} else if (options.text) {
 			text = options.text.split(/[\n\r]+/);
 			for (i = 0; i < text.length; i++) {
 				p = document.createElement('p');

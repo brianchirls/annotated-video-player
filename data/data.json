@@ -40,7 +40,7 @@
 		"title": "Media Left Template Used for Still Image",
 		"headline": "The United States of Shale Energy",
 		"template": "media-left",
-		"text": "Growing demand from surging Asian economies has driven energy prices upward in recent years, finally making it profitable to use hydro-fracking techniques to extract oil and gas from underground shale formations. This means that places once considered off-limits to energy exploration are now \"in play.\" But how will the new industrialization of once-pastoral landscapes from North Dakota to Western New York change the nature of those communities?",
+		"html": "<p>Growing demand from surging <b>Asian</b> economies has driven energy prices upward in recent years, finally making it profitable to use hydro-fracking techniques to extract oil and gas from underground shale formations. This means that places once considered off-limits to energy exploration are now \"in play.\" But how will the new industrialization of once-pastoral landscapes from <a href=\"http://en.wikipedia.org/wiki/North_dakota\">North Dakota</a> to Western New York change the nature of those communities?</p>",
 		"image": "image/sample.jpg",
 		"imageLink": "http://slashdot.org",
 		"caption": "The Energy Parade makes its way down main street, Willison on September 18th. The annual street festival and barbecue is paid for by...",
