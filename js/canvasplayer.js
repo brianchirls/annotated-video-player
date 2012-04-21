@@ -138,10 +138,10 @@
 				posx = event.pageX;
 				posy = event.pageY;
 			} else if (event.clientX !== undefined || event.clientY !== undefined) {
-				posx = event.clientX + document.body.scrollLeft
-					+ document.documentElement.scrollLeft;
-				posy = event.clientY + document.body.scrollTop
-					+ document.documentElement.scrollTop;
+				posx = event.clientX + document.body.scrollLeft +
+					document.documentElement.scrollLeft;
+				posy = event.clientY + document.body.scrollTop +
+					document.documentElement.scrollTop;
 			}
 			// posx and posy contain the mouse position relative to the document
 		}
@@ -174,7 +174,7 @@
 	* @param {Number} radius The corner radius. Defaults to 5;
 	* @param {Boolean} fill Whether to fill the rectangle. Defaults to false.
 	* @param {Boolean} stroke Whether to stroke the rectangle. Defaults to true.
-	* 
+	*
 	* borrowed from http://js-bits.blogspot.com/2010/07/canvas-rounded-corner-rectangles.html
 	*/
 	function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
@@ -201,7 +201,7 @@
 		}
 		if (fill) {
 			ctx.fill();
-		}  
+		}
 	}
 	
 	function VideoPlayer(options) {
@@ -278,7 +278,7 @@
 		canvas = canvas;
 		ctx = canvas.getContext('2d');
 		canvas.height = 20;
-		canvas.style.margin = '9px 15px 0'; 
+		canvas.style.margin = '9px 15px 0';
 		//canvas.width = 458; //todo: calculate this automatically
 		main.appendChild(canvas);
 		
@@ -402,7 +402,7 @@
 				ctx.clearRect(0, 0, canvas.width, canvas.height);
 				ctx.lineWidth = 12;
 				
-				if (media.duration) {			
+				if (media.duration) {
 					//first draw loaded
 					ctx.lineCap = 'round';
 					ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
