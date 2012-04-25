@@ -10,13 +10,11 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700|Mako' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/style.css">
-		<!--[if gte IE 9]>
-		  <style type="text/css">
-			/* http://www.colorzilla.com/gradient-editor/ */
-			.popcorn-chapter, .popcorn-chapter.active {
-			   filter: none;
-			}
-		  </style>
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="css/ie8.css">
+		<![endif]-->
+		<!--[if IE 9]>
+		  <link rel="stylesheet" href="css/ie9.css">
 		<![endif]-->
 		<script type="text/javascript" src="external/modernizr.js"></script>
 	</head>
@@ -25,7 +23,7 @@
 			<header>
 				<div class="feature">Video Feature</div>
 				<h1>Energy Boom and Bust in the West</h1>
-				<p>Aliquam quis mi. Nulla facilisi. Aliquam erat volutpat. Suspendisse bibendum. Fusce ac sapien. Donec ac turpis. Nulla magna velit, sagittis at, vestibulum sit amet, lobortis at, purus.
+				<p>Aliquam quis mi. Nulla facilisi. Aliquam erat volutpat. Suspendisse bibendum. Fusce ac sapien. Donec ac turpis. Nulla magna velit, sagittis at, vestibulum sit amet, lobortis at, purus.</p>
 			</header>
 			<section id="main">
 				<div id="video-container">
@@ -36,6 +34,7 @@
 						<source src="video/temp.webm" type='video/webm; codecs="vp8, vorbis"' />
 
 						<source src="video/temp.ogv" type='video/ogg; codecs="theora, vorbis"' />
+						<img src="http://www.stanford.edu/group/ruralwest/cgi-bin/projects/energyvideo/images/chapter_01.jpg"/>
 					</video>
 					<div id="lower-third" class="require-video"></div>
 				</div>

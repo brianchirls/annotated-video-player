@@ -5,3 +5,7 @@
 .popcorn-chapter.active {
 	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#272318', endColorstr='#27231c',GradientType=0 ); /* IE6-8 */
 }
+
+section {
+	display: block;
+}

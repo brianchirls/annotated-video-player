@@ -4,6 +4,10 @@ body {
 	font-family: 'Bitter';
 }
 
+a, a:visited {
+	color: inherit;
+}
+
 #top {
 	margin: 10px auto -40px auto;
 	padding: 0 12px;
