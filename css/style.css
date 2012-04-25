@@ -565,3 +565,30 @@ a, a:visited {
 html.no-video .require-video {
 	display: none;
 }
+
+#no-video {
+	display: none;
+}
+
+html.no-video #no-video {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: url('../image/no-video.png');
+}
+
+html.no-video #no-video-msg {
+	width: 430px;
+	margin: 200px auto;
+	padding: 23px 55px;
+	background-color: #24211C;
+	border: #867C5F solid 1px;
+	color: white;
+}
+
+html.no-video #no-video-msg a {
+	color: #D4C395;
+}
