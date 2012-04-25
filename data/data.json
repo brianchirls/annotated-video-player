@@ -44,6 +44,8 @@
 		"image": "image/sample.jpg",
 		"imageLink": "http://slashdot.org",
 		"caption": "The Energy Parade makes its way down main street, <a href=\"http://en.wikipedia.org/wiki/Williston,_North_Dakota\">Willison</a> on September 18th. The annual street festival and barbecue is paid for by...",
+		"link": "http://mozilla.org",
+		"linkText": "Read more please",
 		"related": [
 			{
 				"text": "North Dakota Department of Mineral Resources",

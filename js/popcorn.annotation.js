@@ -237,6 +237,19 @@
 			}
 		}
 
+		if (options.link) {
+			link = document.createElement('a');
+			link.setAttribute('href', options.link);
+			link.setAttribute('target', '_blank');
+			base.addClass(link, 'readmore');
+			if (options.linkText) {
+				link.appendChild(document.createTextNode(options.linkText));
+			} else {
+				link.appendChild(document.createTextNode('Read More'));
+			}
+			mainSection.appendChild(link);
+		}
+
 		main.appendChild(mainSection);
 		main.appendChild(document.createElement('hr'));
 		base.addClass(main.lastChild, 'clear');

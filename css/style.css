@@ -424,6 +424,20 @@ body {
 	padding-right: 22px;
 }
 
+.popcorn-annotation .annotation-container section .readmore {
+	display: block;
+	text-transform: uppercase;
+	font-family: 'Bitter';
+	font-weight: bold;
+	font-size: 13px;
+	color: #000;
+	text-decoration: none;
+}
+
+.popcorn-annotation .annotation-container section .readmore:after {
+	content: '\0000a0\0000BB'; /* &nbsp;&raquo; */
+}
+
 .annotation-handle {
 	display: none;
 	position: absolute;
