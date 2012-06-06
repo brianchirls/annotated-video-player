@@ -217,7 +217,7 @@
 				img.src = 'frames/frame' + options.start + '.jpg';
 				img.addEventListener('load', function() {
 					div.insertBefore(img, div.firstChild);
-					img.addEventListener('click', jumpFn);
+					img.addEventListener('click', jumpFn, false);
 				}, false);
 
 				c = options.chapterIndex + 1;

@@ -1,10 +1,9 @@
 (function (window, Popcorn) {
 	"use strict";
 
-	var document = window.document;
-
-	//temp
-	var styleSheet;
+	var document = window.document,
+		styleSheet,
+		head = document.head || document.getElementsByTagName('head')[0];
 
 	Popcorn.basePlugin('chapter', function(options, base) {
 		var media = this.media, targetTime;
@@ -40,7 +39,7 @@
 			styleSheet.appendChild(
 				document.createTextNode('.popcorn-chapter { cursor: pointer; }\n'
 			));
-			document.head.appendChild(styleSheet);
+			head.appendChild(styleSheet);
 		}
 
 		base.makeContainer();

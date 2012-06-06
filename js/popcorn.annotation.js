@@ -5,6 +5,7 @@
 
 	//temp
 	var styleSheet,
+		head = document.head || document.getElementsByTagName('head')[0],
 		isIOS = navigator.userAgent.match(/i(Pad|Phone|Pod)/);
 
 	Popcorn.basePlugin('annotation', function(options, base) {
@@ -111,7 +112,7 @@
 					'.popcorn-annotation aside { float: right; }' +
 					'.popcorn-annotation aside > a { display: block; }'
 			));
-			document.head.appendChild(styleSheet);
+			head.appendChild(styleSheet);
 		}
 
 		base.makeContainer();

@@ -17,7 +17,7 @@
 		PopcornBaseEvent;
 	
 	function logError(err) {
-		if (err) {
+		if (err && console) {
 			console.log(err.stack || err.stacktrace || err.message || err);
 		}
 	}

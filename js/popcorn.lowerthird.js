@@ -4,7 +4,8 @@
 
 "use strict";
 
-	var styleSheet;
+	var styleSheet,
+		head = document.head || document.getElementsByTagName('head')[0];
 
 	Popcorn.basePlugin( 'lowerthird' , function(options, base) {
 		var popcorn,
@@ -34,7 +35,7 @@
 					'.popcorn-lowerthird-title { font-size: 2.5em; font-weight: bold; }\n' +
 					'.popcorn-lowerthird-subtitle { font-size: 1.5em; }\n'
 			));
-			document.head.appendChild(styleSheet);
+			head.appendChild(styleSheet);
 		}
 
 		container = base.makeContainer();

@@ -2,6 +2,7 @@
 	"use strict";
 	
 	var document = window.document,
+		head = document.head || document.getElementsByTagName('head')[0],
 		stylesheet,
 		addClass, removeClass,
 
@@ -260,7 +261,7 @@
 			'.video-player-bigbutton.visible { display: block; } \n' +
 			'.video-player-bigbutton.visible + .video-player { display: none; } \n' +
 			'.video-player.tiny .video-player-timer { display: none; } \n'));
-			document.head.appendChild(stylesheet);
+			head.appendChild(stylesheet);
 		}
 
 		if (typeof options.container === 'string') {
@@ -502,12 +503,12 @@
 					//draw play head
 					ctx.fillStyle = me.handleborder;
 					ctx.beginPath();
-					ctx.arc(2 + 5 + (canvas.width - 16) * media.currentTime/media.duration, 12, 9, 0, Math.PI * 2);
+					ctx.arc(2 + 5 + (canvas.width - 16) * media.currentTime/media.duration, 12, 9, 0, Math.PI * 2, false);
 					ctx.fill();
 
 					ctx.fillStyle = me.handle;
 					ctx.beginPath();
-					ctx.arc(2 + 5 + (canvas.width - 16) * media.currentTime/media.duration, 12, 5, 0, Math.PI * 2);
+					ctx.arc(2 + 5 + (canvas.width - 16) * media.currentTime/media.duration, 12, 5, 0, Math.PI * 2, false);
 					ctx.fill();
 				}
 			}
